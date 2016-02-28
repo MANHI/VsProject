@@ -2,6 +2,7 @@
 #define __GRAPH_H
 
 #include<iostream>
+#include<queue>
 using namespace std;
 
 /******用邻接表来实现有向图******/
@@ -35,6 +36,6 @@ void DestroyGraph(Graph& );
 int GetVNodeDegree(Graph &, int, int &, int &);
 void DFSGraph(Graph&, int);
 void DFSTraver(Graph&);
-
+void BFSGraph(Graph& );
 
 #endif

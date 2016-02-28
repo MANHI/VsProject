@@ -7,6 +7,6 @@ int main()
 	cin >> vexnum >> arcnum;
 	CreateGraph(G, vexnum, arcnum);
 	cout << "DfsTraver" << endl;
-	DFSTraver(G);
+	BFSGraph(G);
 	return 0;
 }

@@ -95,3 +95,30 @@ void DFSTraver(Graph& G)
 			DFSGraph(G, i);
 	}
 }
+
+void BFSGraph(Graph& G)
+{
+	queue<int> q;
+	for (int i = 0; i < G.vexnum; i++)
+		visit[i] = false;
+	for (int i = 0; i < G.vexnum; i++)
+	{
+		if (visit[i] == false)
+		{
+			visit[i] = true;
+			cout << i << " ";
+			q.push(i);
+			ArcNode *arc = G.vertices[i].firstArc;
+			while (arc)
+			{
+				if (!visit[i])
+				{
+					visit[i] = true;
+					cout << i << " ";
+					q.pop();
+				}
+				arc = arc->nextarc;
+			}
+		}
+	}
+}
